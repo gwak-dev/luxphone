@@ -137,17 +137,105 @@ class Gallery {
   }
 }
 
-const images = [
-  'https://luxphone.vercel.app/gallery/Accessories-11-1.webp',
-  'https://luxphone.vercel.app/gallery/Accessories-Lux-Phone-(3).webp',
-  'https://luxphone.vercel.app/gallery/Accessories-8-1.webp',
-  'https://luxphone.vercel.app/gallery/Accessories-Lux-Phone-(2).webp',
-  'https://luxphone.vercel.app/gallery/Accessories.webp',
-  'https://luxphone.vercel.app/gallery/Accessories-6.webp',
-  'https://luxphone.vercel.app/gallery/Accessories-Lux-Phone-(1).webp',
-  'https://luxphone.vercel.app/gallery/Accessories-10-1.webp',
-  'https://luxphone.vercel.app/gallery/Accessories-Lux-Phone.webp',
-  'https://luxphone.vercel.app/gallery/Accessories-4.webp',
-  'https://luxphone.vercel.app/gallery/Accessories-12.webp',
-  'https://luxphone.vercel.app/gallery/Accessories-9-1.webp'
-]; 
+document.addEventListener('DOMContentLoaded', function() {
+    const images = [
+        'https://raw.githubusercontent.com/gwak-dev/luxphone/main/public/gallery/01.webp',
+        'https://raw.githubusercontent.com/gwak-dev/luxphone/main/public/gallery/02.webp',
+        'https://raw.githubusercontent.com/gwak-dev/luxphone/main/public/gallery/03.webp',
+        'https://raw.githubusercontent.com/gwak-dev/luxphone/main/public/gallery/04.webp',
+        'https://raw.githubusercontent.com/gwak-dev/luxphone/main/public/gallery/05.webp',
+        'https://raw.githubusercontent.com/gwak-dev/luxphone/main/public/gallery/06.webp',
+        'https://raw.githubusercontent.com/gwak-dev/luxphone/main/public/gallery/07.webp',
+        'https://raw.githubusercontent.com/gwak-dev/luxphone/main/public/gallery/08.webp',
+        'https://raw.githubusercontent.com/gwak-dev/luxphone/main/public/gallery/09.webp',
+        'https://raw.githubusercontent.com/gwak-dev/luxphone/main/public/gallery/10.webp',
+        'https://raw.githubusercontent.com/gwak-dev/luxphone/main/public/gallery/11.webp',
+        'https://raw.githubusercontent.com/gwak-dev/luxphone/main/public/gallery/12.webp'
+    ];
+
+    const gallery = document.createElement('div');
+    gallery.className = 'lux-gallery';
+    gallery.style.cssText = `
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        padding: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+    `;
+
+    images.forEach((url, index) => {
+        const imgContainer = document.createElement('div');
+        imgContainer.className = 'gallery-item';
+        imgContainer.style.cssText = `
+            position: relative;
+            padding-bottom: 100%;
+            overflow: hidden;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        `;
+
+        const img = document.createElement('img');
+        img.src = url;
+        img.alt = `LUX PHONE Gallery Image ${index + 1}`;
+        img.style.cssText = `
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        `;
+
+        imgContainer.appendChild(img);
+        gallery.appendChild(imgContainer);
+
+        // Hover 효과
+        imgContainer.addEventListener('mouseenter', () => {
+            img.style.transform = 'scale(1.1)';
+        });
+
+        imgContainer.addEventListener('mouseleave', () => {
+            img.style.transform = 'scale(1)';
+        });
+
+        // 클릭시 큰 이미지 보기
+        imgContainer.addEventListener('click', () => {
+            const modal = document.createElement('div');
+            modal.style.cssText = `
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.9);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                z-index: 1000;
+                cursor: pointer;
+            `;
+
+            const modalImg = document.createElement('img');
+            modalImg.src = url;
+            modalImg.style.cssText = `
+                max-width: 90%;
+                max-height: 90vh;
+                object-fit: contain;
+            `;
+
+            modal.appendChild(modalImg);
+            document.body.appendChild(modal);
+
+            modal.addEventListener('click', () => {
+                modal.remove();
+            });
+        });
+    });
+
+    // 갤러리를 페이지에 추가
+    const targetElement = document.getElementById('lux-gallery') || document.body;
+    targetElement.appendChild(gallery);
+}); 

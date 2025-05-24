@@ -1,0 +1,11 @@
+<script>
+// GitHub에서 호스팅되는 gallery.js 파일
+const script = document.createElement('script');
+script.src = 'https://raw.githubusercontent.com/gwak-dev/luxphone/main/public/js/gallery.js';
+document.head.appendChild(script);
+
+// 갤러리가 들어갈 div
+const galleryDiv = document.createElement('div');
+galleryDiv.id = 'lux-gallery';
+document.currentScript.parentElement.appendChild(galleryDiv);
+</script> 
