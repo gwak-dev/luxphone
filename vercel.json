@@ -5,11 +5,15 @@
       "headers": [
         {
           "key": "Access-Control-Allow-Origin",
-          "value": "*.webflow.com"
+          "value": "https://*.canvas.webflow.com"
         },
         {
           "key": "Access-Control-Allow-Methods",
-          "value": "GET"
+          "value": "GET, OPTIONS"
+        },
+        {
+          "key": "Access-Control-Allow-Headers",
+          "value": "Content-Type"
         }
       ]
     },
@@ -18,11 +22,15 @@
       "headers": [
         {
           "key": "Access-Control-Allow-Origin",
-          "value": "*.webflow.com"
+          "value": "https://*.canvas.webflow.com"
         },
         {
           "key": "Access-Control-Allow-Methods",
-          "value": "GET"
+          "value": "GET, OPTIONS"
+        },
+        {
+          "key": "Access-Control-Allow-Headers",
+          "value": "Content-Type"
         }
       ]
     },
@@ -31,11 +39,15 @@
       "headers": [
         {
           "key": "Access-Control-Allow-Origin",
-          "value": "*.webflow.com"
+          "value": "https://*.canvas.webflow.com"
         },
         {
           "key": "Access-Control-Allow-Methods",
-          "value": "GET"
+          "value": "GET, OPTIONS"
+        },
+        {
+          "key": "Access-Control-Allow-Headers",
+          "value": "Content-Type"
         }
       ]
     }
