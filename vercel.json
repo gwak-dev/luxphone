@@ -18,10 +18,7 @@
       ]
     }
   ],
-  "routes": [
-    {
-      "src": "/gallery/(.*)",
-      "dest": "/gallery/$1"
-    }
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/public/$1" }
   ]
 } 
