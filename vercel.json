@@ -5,7 +5,7 @@
       "headers": [
         {
           "key": "Access-Control-Allow-Origin",
-          "value": "https://luxphone.webflow.io, https://luxphone.com.au"
+          "value": "*"
         },
         {
           "key": "Access-Control-Allow-Methods",
@@ -16,6 +16,12 @@
           "value": "X-Requested-With, Content-Type, Accept"
         }
       ]
+    }
+  ],
+  "routes": [
+    {
+      "src": "/gallery/(.*)",
+      "dest": "/gallery/$1"
     }
   ]
 } 
