@@ -32,6 +32,58 @@
 .gallery-item:hover img {
     transform: scale(1.1);
 }
+
+.modal-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+    z-index: 1001;
+}
+
+.modal-nav:hover {
+    background: rgba(255, 255, 255, 1);
+}
+
+.modal-prev {
+    left: 20px;
+}
+
+.modal-next {
+    right: 20px;
+}
+
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+    z-index: 1001;
+}
+
+.modal-close:hover {
+    background: rgba(255, 255, 255, 1);
+}
 </style>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
@@ -53,6 +105,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const gallery = document.createElement('div');
     gallery.className = 'lux-gallery';
 
+    let currentImageIndex = 0;
+
     images.forEach((url, index) => {
         const imgContainer = document.createElement('div');
         imgContainer.className = 'gallery-item';
@@ -67,37 +121,89 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // 클릭시 큰 이미지 보기
         imgContainer.addEventListener('click', () => {
-            const modal = document.createElement('div');
-            modal.style.cssText = `
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background: rgba(0, 0, 0, 0.9);
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                z-index: 1000;
-                cursor: pointer;
-            `;
-
-            const modalImg = document.createElement('img');
-            modalImg.src = url;
-            modalImg.style.cssText = `
-                max-width: 90%;
-                max-height: 90vh;
-                object-fit: contain;
-            `;
-
-            modal.appendChild(modalImg);
-            document.body.appendChild(modal);
-
-            modal.addEventListener('click', () => {
-                modal.remove();
-            });
+            currentImageIndex = index;
+            showModal(currentImageIndex);
         });
     });
+
+    function showModal(index) {
+        const modal = document.createElement('div');
+        modal.style.cssText = `
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        `;
+
+        const modalImg = document.createElement('img');
+        modalImg.src = images[index];
+        modalImg.style.cssText = `
+            max-width: 90%;
+            max-height: 90vh;
+            object-fit: contain;
+        `;
+
+        // 이전 버튼
+        const prevBtn = document.createElement('button');
+        prevBtn.className = 'modal-nav modal-prev';
+        prevBtn.innerHTML = '&#10094;';
+        prevBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+            modalImg.src = images[currentImageIndex];
+        });
+
+        // 다음 버튼
+        const nextBtn = document.createElement('button');
+        nextBtn.className = 'modal-nav modal-next';
+        nextBtn.innerHTML = '&#10095;';
+        nextBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            modalImg.src = images[currentImageIndex];
+        });
+
+        // 닫기 버튼
+        const closeBtn = document.createElement('button');
+        closeBtn.className = 'modal-close';
+        closeBtn.innerHTML = '×';
+        closeBtn.addEventListener('click', () => {
+            modal.remove();
+        });
+
+        modal.appendChild(modalImg);
+        modal.appendChild(prevBtn);
+        modal.appendChild(nextBtn);
+        modal.appendChild(closeBtn);
+        document.body.appendChild(modal);
+
+        // 모달 클릭시 닫기
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.remove();
+            }
+        });
+
+        // 키보드 네비게이션
+        document.addEventListener('keydown', function handleKeyDown(e) {
+            if (e.key === 'ArrowLeft') {
+                currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+                modalImg.src = images[currentImageIndex];
+            } else if (e.key === 'ArrowRight') {
+                currentImageIndex = (currentImageIndex + 1) % images.length;
+                modalImg.src = images[currentImageIndex];
+            } else if (e.key === 'Escape') {
+                modal.remove();
+                document.removeEventListener('keydown', handleKeyDown);
+            }
+        });
+    }
 
     // 갤러리를 페이지에 추가
     document.getElementById('lux-gallery').appendChild(gallery);
