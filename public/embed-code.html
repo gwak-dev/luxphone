@@ -1,11 +1,105 @@
-<script>
-// GitHub에서 호스팅되는 gallery.js 파일
-const script = document.createElement('script');
-script.src = 'https://raw.githubusercontent.com/gwak-dev/luxphone/main/public/js/gallery.js';
-document.head.appendChild(script);
+<!-- LUX PHONE Gallery Embed Code -->
+<div id="lux-gallery"></div>
+<style>
+.lux-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
-// 갤러리가 들어갈 div
-const galleryDiv = document.createElement('div');
-galleryDiv.id = 'lux-gallery';
-document.currentScript.parentElement.appendChild(galleryDiv);
+.gallery-item {
+    position: relative;
+    padding-bottom: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+</style>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const images = [
+        'https://raw.githubusercontent.com/gwak-dev/luxphone/main/public/gallery/01.webp',
+        'https://raw.githubusercontent.com/gwak-dev/luxphone/main/public/gallery/02.webp',
+        'https://raw.githubusercontent.com/gwak-dev/luxphone/main/public/gallery/03.webp',
+        'https://raw.githubusercontent.com/gwak-dev/luxphone/main/public/gallery/04.webp',
+        'https://raw.githubusercontent.com/gwak-dev/luxphone/main/public/gallery/05.webp',
+        'https://raw.githubusercontent.com/gwak-dev/luxphone/main/public/gallery/06.webp',
+        'https://raw.githubusercontent.com/gwak-dev/luxphone/main/public/gallery/07.webp',
+        'https://raw.githubusercontent.com/gwak-dev/luxphone/main/public/gallery/08.webp',
+        'https://raw.githubusercontent.com/gwak-dev/luxphone/main/public/gallery/09.webp',
+        'https://raw.githubusercontent.com/gwak-dev/luxphone/main/public/gallery/10.webp',
+        'https://raw.githubusercontent.com/gwak-dev/luxphone/main/public/gallery/11.webp',
+        'https://raw.githubusercontent.com/gwak-dev/luxphone/main/public/gallery/12.webp'
+    ];
+
+    const gallery = document.createElement('div');
+    gallery.className = 'lux-gallery';
+
+    images.forEach((url, index) => {
+        const imgContainer = document.createElement('div');
+        imgContainer.className = 'gallery-item';
+
+        const img = document.createElement('img');
+        img.src = url;
+        img.alt = `LUX PHONE Gallery Image ${index + 1}`;
+        img.loading = 'lazy';
+
+        imgContainer.appendChild(img);
+        gallery.appendChild(imgContainer);
+
+        // 클릭시 큰 이미지 보기
+        imgContainer.addEventListener('click', () => {
+            const modal = document.createElement('div');
+            modal.style.cssText = `
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.9);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                z-index: 1000;
+                cursor: pointer;
+            `;
+
+            const modalImg = document.createElement('img');
+            modalImg.src = url;
+            modalImg.style.cssText = `
+                max-width: 90%;
+                max-height: 90vh;
+                object-fit: contain;
+            `;
+
+            modal.appendChild(modalImg);
+            document.body.appendChild(modal);
+
+            modal.addEventListener('click', () => {
+                modal.remove();
+            });
+        });
+    });
+
+    // 갤러리를 페이지에 추가
+    document.getElementById('lux-gallery').appendChild(gallery);
+});
 </script> 
