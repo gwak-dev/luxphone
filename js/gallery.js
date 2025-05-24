@@ -135,4 +135,19 @@ class Gallery {
     this.currentIndex = (this.currentIndex + 1) % this.images.length;
     this.lightboxImage.src = this.images[this.currentIndex].url;
   }
-} 
+}
+
+const images = [
+  'https://luxphone.vercel.app/gallery/Accessories-11-1.webp',
+  'https://luxphone.vercel.app/gallery/Accessories-Lux-Phone-(3).webp',
+  'https://luxphone.vercel.app/gallery/Accessories-8-1.webp',
+  'https://luxphone.vercel.app/gallery/Accessories-Lux-Phone-(2).webp',
+  'https://luxphone.vercel.app/gallery/Accessories.webp',
+  'https://luxphone.vercel.app/gallery/Accessories-6.webp',
+  'https://luxphone.vercel.app/gallery/Accessories-Lux-Phone-(1).webp',
+  'https://luxphone.vercel.app/gallery/Accessories-10-1.webp',
+  'https://luxphone.vercel.app/gallery/Accessories-Lux-Phone.webp',
+  'https://luxphone.vercel.app/gallery/Accessories-4.webp',
+  'https://luxphone.vercel.app/gallery/Accessories-12.webp',
+  'https://luxphone.vercel.app/gallery/Accessories-9-1.webp'
+]; 
