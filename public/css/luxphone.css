@@ -14,6 +14,8 @@
   --untitled-ui--gray800: #393939;
   --untitled-ui--primary50: #fffdf5;
   --untitled-ui--gray400: #98a2b3;
+  --untitled-ui--primary500: #9e77ed;
+  --untitled-ui--primary800: #53389e;
 }
 
 .w-layout-grid {
@@ -125,7 +127,7 @@
   display: grid;
 }
 
-.uui-navbar07_component {
+.nav {
   border-bottom: 1px solid var(--untitled-ui--gray100);
   background-color: #fff;
   align-items: center;
@@ -165,7 +167,7 @@
   padding: .75rem 1rem;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 500;
   transition: all .3s;
 }
 
@@ -175,6 +177,10 @@
 
 .uui-navbar07_link.w--current {
   color: #000;
+}
+
+.uui-navbar07_link.gap {
+  margin-right: 2rem;
 }
 
 .uui-navbar07_dropdown-toggle {
@@ -420,7 +426,7 @@
   line-height: 1.2;
 }
 
-.uui-section_heroheader01 {
+.hero {
   overflow: hidden;
 }
 
@@ -609,8 +615,6 @@
 
 .uui-icon-1x1-xsmall-2 {
   color: var(--untitled-ui--gray800);
-  width: 1.5rem;
-  height: 1.5rem;
 }
 
 .uui-layout77_component {
@@ -643,8 +647,8 @@
   border-radius: 100%;
   justify-content: center;
   align-items: center;
-  width: 3.5rem;
-  height: 3.5rem;
+  width: 5rem;
+  height: 5rem;
   display: flex;
 }
 
@@ -820,7 +824,7 @@
   overflow: hidden;
 }
 
-.uui-section_contact07 {
+.contact {
   background-color: var(--untitled-ui--gray50-2);
 }
 
@@ -873,7 +877,7 @@
   grid-auto-columns: 1fr;
   justify-content: space-around;
   place-items: center start;
-  width: 175rem;
+  width: 145rem;
   display: flex;
 }
 
@@ -885,14 +889,14 @@
 }
 
 .uui-logos04_logo {
-  height: 3rem;
+  height: 8rem;
 }
 
 .uui-logo-loop_inner {
   display: flex;
 }
 
-.uui-section_logos04 {
+.logos {
   overflow: hidden;
 }
 
@@ -1041,7 +1045,8 @@
 
 .uui-footer07_bottom-wrapper {
   border-top: 1px solid var(--untitled-ui--gray200);
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
   margin-top: 4rem;
   padding-top: 2rem;
   display: flex;
@@ -1257,7 +1262,10 @@
 }
 
 .uui-layout49_image-wrapper {
-  background-color: var(--untitled-ui--gray100);
+  background-image: url('../images/s_Phone-Repair-Apr-14-2025.jpg');
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
   align-items: center;
   width: 100%;
   height: 100%;
@@ -1407,6 +1415,476 @@
   font-size: 1.125rem;
   font-weight: 600;
   line-height: 1.5;
+}
+
+.code-embed {
+  margin-top: 4rem;
+}
+
+.link {
+  color: var(--untitled-ui--gray500);
+  text-decoration: none;
+}
+
+.div-block-2 {
+  width: 2rem;
+  height: 100%;
+}
+
+.uui-text-size-medium-3 {
+  color: var(--untitled-ui--primary700);
+  text-align: center;
+  letter-spacing: normal;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.uui-text-align-center-3 {
+  text-align: center;
+}
+
+.uui-container-large-3 {
+  width: 100%;
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.uui-page-padding-3 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.uui-max-width-large-3 {
+  width: 100%;
+  max-width: 48rem;
+}
+
+.uui-text-size-large-3 {
+  color: var(--untitled-ui--gray600);
+  letter-spacing: normal;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.5;
+}
+
+.uui-heading-xxsmall-2 {
+  color: var(--untitled-ui--gray900);
+  letter-spacing: normal;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.uui-heading-medium-3 {
+  color: var(--untitled-ui--gray900);
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-size: 2.25rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.uui-button-4 {
+  grid-column-gap: .5rem;
+  border: 1px solid var(--untitled-ui--primary600);
+  background-color: var(--untitled-ui--primary600);
+  color: var(--untitled-ui--white);
+  text-align: center;
+  white-space: nowrap;
+  border-radius: .5rem;
+  justify-content: center;
+  align-items: center;
+  padding: .625rem 1.125rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+  text-decoration: none;
+  transition: all .3s;
+  display: flex;
+  box-shadow: 0 1px 2px #1018280d;
+}
+
+.uui-button-4:hover {
+  border-color: var(--untitled-ui--primary700);
+  background-color: var(--untitled-ui--primary700);
+}
+
+.uui-button-4:focus {
+  background-color: var(--untitled-ui--primary600);
+  box-shadow: 0 1px 2px 0 #1018280d, 0 0 0 4px var(--untitled-ui--primary100);
+}
+
+.uui-button-row-3 {
+  grid-column-gap: .75rem;
+  grid-row-gap: .75rem;
+  flex-wrap: wrap;
+  align-items: center;
+  display: flex;
+}
+
+.uui-button-row-3.button-row-center {
+  justify-content: center;
+}
+
+.uui-layout76_component {
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+
+.uui-layout76_list {
+  grid-column-gap: 2rem;
+  grid-row-gap: 3rem;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-columns: 1fr;
+  place-items: start center;
+  width: 100%;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  display: grid;
+}
+
+.uui-layout76_image {
+  border-radius: 16px;
+  width: 100%;
+}
+
+.uui-layout76_item {
+  text-align: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  display: flex;
+}
+
+.uui-layout76_image-wrapper {
+  background-color: var(--untitled-ui--gray50-2);
+  width: 100%;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.uui-button-secondary-gray-4 {
+  grid-column-gap: .5rem;
+  border: 1px solid var(--untitled-ui--gray300);
+  background-color: var(--untitled-ui--white);
+  color: var(--untitled-ui--gray700);
+  text-align: center;
+  white-space: nowrap;
+  border-radius: .5rem;
+  justify-content: center;
+  align-items: center;
+  padding: .625rem 1.125rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+  text-decoration: none;
+  transition: all .3s;
+  display: flex;
+  box-shadow: 0 1px 2px #1018280d;
+}
+
+.uui-button-secondary-gray-4:hover {
+  background-color: var(--untitled-ui--gray50-2);
+  color: var(--untitled-ui--gray800);
+}
+
+.uui-button-secondary-gray-4:focus {
+  background-color: var(--untitled-ui--white);
+  box-shadow: 0 1px 2px 0 #1018280d, 0 0 0 4px var(--untitled-ui--gray100);
+}
+
+.uui-space-xsmall-3 {
+  width: 100%;
+  min-height: 1rem;
+}
+
+.uui-space-xxsmall-2 {
+  width: 100%;
+  min-height: .5rem;
+}
+
+.uui-padding-vertical-xhuge-3 {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+}
+
+.uui-heading-subheading-3 {
+  color: var(--untitled-ui--primary600);
+  margin-bottom: .75rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.uui-text-size-medium-4 {
+  color: var(--untitled-ui--gray600);
+  letter-spacing: normal;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.uui-icon-1x1-xsmall-4 {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.uui-text-style-link-02-2 {
+  color: var(--untitled-ui--primary700);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.uui-contact13_component {
+  grid-column-gap: 1.5rem;
+  grid-row-gap: 1.5rem;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-auto-columns: 1fr;
+  place-items: stretch start;
+  margin-top: 4rem;
+  display: grid;
+}
+
+.uui-contact13_item {
+  background-color: var(--untitled-ui--gray50-2);
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  padding: 1.5rem;
+  display: flex;
+}
+
+.icon-featured-square-large {
+  background-color: var(--untitled-ui--primary500);
+  color: var(--untitled-ui--white);
+  border-radius: .625rem;
+  justify-content: center;
+  align-items: center;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+}
+
+.uui-space-small-2 {
+  width: 100%;
+  min-height: 1.5rem;
+}
+
+.uui-space-xxlarge-2 {
+  width: 100%;
+  min-height: 5rem;
+}
+
+.code-embed-2 {
+  margin-top: 4rem;
+}
+
+.uui-text-size-medium-5 {
+  color: var(--untitled-ui--gray600);
+  letter-spacing: normal;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.uui-text-size-medium-5.text-color-primary700 {
+  color: var(--untitled-ui--primary700);
+}
+
+.social-icon-2 {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+}
+
+.social-link-2 {
+  color: var(--untitled-ui--gray400);
+  transition: all .3s;
+}
+
+.social-link-2:hover {
+  color: var(--untitled-ui--gray500);
+}
+
+.uui-team03_list {
+  grid-column-gap: 2rem;
+  grid-row-gap: 4rem;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-auto-columns: 1fr;
+  place-items: start;
+  display: grid;
+}
+
+.uui-team03_social {
+  grid-column-gap: 1.25rem;
+  grid-row-gap: 1.25rem;
+  grid-template-rows: auto;
+  grid-template-columns: max-content;
+  grid-auto-columns: 1fr;
+  grid-auto-flow: column;
+  align-self: flex-start;
+  margin-top: 1rem;
+  display: grid;
+}
+
+.uui-team03_item {
+  flex-direction: column;
+  align-items: stretch;
+  display: flex;
+}
+
+.uui-team03_image {
+  object-fit: cover;
+  border-radius: 100%;
+  width: 5rem;
+  min-width: 5rem;
+  height: 5rem;
+  min-height: 5rem;
+}
+
+.uui-team03_image-wrapper {
+  margin-bottom: 1.25rem;
+}
+
+.uui-team03_component {
+  margin-top: 4rem;
+}
+
+.uui-team03_cta {
+  grid-column-gap: 5rem;
+  grid-row-gap: 1rem;
+  background-color: var(--untitled-ui--gray50-2);
+  border-radius: 1rem;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr max-content;
+  grid-auto-columns: 1fr;
+  justify-content: space-between;
+  align-items: start;
+  margin-top: 4rem;
+  padding: 2rem;
+  display: grid;
+}
+
+.uui-team03_cta-content {
+  flex: 1;
+}
+
+.uui-team03_cta-button-row {
+  flex-wrap: wrap;
+  align-items: center;
+  display: flex;
+}
+
+.uui-heading-tiny-2 {
+  color: var(--untitled-ui--gray900);
+  letter-spacing: normal;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.uui-layout73_item {
+  flex-direction: column;
+  align-items: center;
+}
+
+.uui-layout73_component {
+  grid-column-gap: 2rem;
+  grid-row-gap: 3rem;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-columns: 1fr;
+  place-items: start;
+  display: grid;
+}
+
+.uui-button-link {
+  grid-column-gap: .5rem;
+  color: var(--untitled-ui--primary700);
+  white-space: nowrap;
+  background-color: #0000;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+  text-decoration: none;
+  transition: all .3s;
+  display: flex;
+}
+
+.uui-button-link:hover {
+  color: var(--untitled-ui--gray600);
+}
+
+.uui-button-icon-2 {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 1.25rem;
+  min-width: 1.25rem;
+  height: 1.25rem;
+  min-height: 1.25rem;
+  display: flex;
+}
+
+.uui-layout73_image-wrapper {
+  background-color: var(--untitled-ui--gray50-2);
+  width: 100%;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.uui-layout73_image {
+  width: 100%;
+}
+
+.div-block-3 {
+  background-image: url('../images/Group-2.png');
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
+.div-block-4 {
+  grid-column-gap: 1rem;
+  grid-row-gap: 1rem;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  display: flex;
+}
+
+.link-2 {
+  color: var(--untitled-ui--gray500);
+  text-decoration: none;
 }
 
 @media screen and (max-width: 991px) {
@@ -1653,6 +2131,10 @@
     padding-bottom: 3.5rem;
   }
 
+  .uui-button-row-2.is-reverse-mobile-landscape {
+    display: none;
+  }
+
   .uui-layout49_component {
     grid-column-gap: 3rem;
     grid-auto-flow: row;
@@ -1673,6 +2155,38 @@
   .uui-team02_list {
     grid-template-columns: 1fr 1fr;
   }
+
+  .uui-padding-vertical-xhuge-3 {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+
+  .uui-contact13_component {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .uui-space-xxlarge-2 {
+    min-height: 4.5rem;
+  }
+
+  .uui-team03_list {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .uui-team03_cta {
+    grid-column-gap: 3rem;
+    grid-row-gap: 2rem;
+    grid-template-columns: 1fr;
+  }
+
+  .uui-team03_cta-content {
+    margin-right: 3rem;
+  }
+
+  .uui-team03_cta-button-row {
+    flex: none;
+    justify-content: flex-start;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -1692,7 +2206,7 @@
     padding-bottom: .75rem;
   }
 
-  .uui-navbar07_component {
+  .nav {
     min-height: 4.5rem;
     padding-left: 1rem;
     padding-right: 1rem;
@@ -1917,7 +2431,7 @@
 
   .uui-logos04_list {
     grid-template-columns: 10rem 10rem 10rem 10rem 10rem 10rem 10rem 10rem;
-    width: 124rem;
+    width: 60rem;
   }
 
   .uui-logos04_wrapper {
@@ -1925,7 +2439,7 @@
   }
 
   .uui-logos04_logo {
-    height: 2.5rem;
+    height: 4rem;
   }
 
   .uui-logo-loop_component {
@@ -2060,7 +2574,7 @@
   }
 
   .uui-layout49_image-wrapper {
-    min-height: auto;
+    min-height: 20rem;
     padding: 1.5rem 1rem;
   }
 
@@ -2098,6 +2612,155 @@
 
   .uui-team02_component {
     margin-top: 3rem;
+  }
+
+  .uui-page-padding-3 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .max-width-full-mobile-landscape-3 {
+    width: 100%;
+    max-width: none;
+  }
+
+  .uui-text-size-large-3 {
+    font-size: 1rem;
+  }
+
+  .uui-heading-xxsmall-2 {
+    font-size: 1.125rem;
+  }
+
+  .uui-heading-medium-3 {
+    font-size: 1.75rem;
+    line-height: 1.4;
+  }
+
+  .uui-button-4 {
+    font-size: 1rem;
+  }
+
+  .uui-button-4:hover {
+    border-color: var(--untitled-ui--primary600);
+    background-color: var(--untitled-ui--primary600);
+  }
+
+  .uui-button-row-3 {
+    align-self: stretch;
+  }
+
+  .uui-button-row-3.button-row-center.is-reverse-mobile-landscape, .uui-button-row-3.is-reverse-mobile-landscape {
+    flex-direction: column-reverse;
+  }
+
+  .uui-button-wrapper-3.max-width-full-mobile-landscape-3 {
+    width: 100%;
+  }
+
+  .uui-layout76_component {
+    align-items: stretch;
+  }
+
+  .uui-layout76_list {
+    grid-template-columns: 1fr;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .uui-layout76_image-wrapper {
+    margin-bottom: 1.5rem;
+  }
+
+  .uui-button-secondary-gray-4 {
+    padding-left: 1.25rem;
+    font-size: 1rem;
+  }
+
+  .uui-button-secondary-gray-4:hover {
+    background-color: var(--untitled-ui--white);
+    color: var(--untitled-ui--gray700);
+  }
+
+  .uui-space-xsmall-3 {
+    min-height: .75rem;
+  }
+
+  .uui-padding-vertical-xhuge-3 {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .uui-contact13_component {
+    grid-template-columns: 1fr;
+    margin-top: 3rem;
+  }
+
+  .uui-contact13_item {
+    padding: 1.5rem;
+  }
+
+  .uui-space-small-2 {
+    min-height: 1.25rem;
+  }
+
+  .uui-space-xxlarge-2 {
+    min-height: 3rem;
+  }
+
+  .social-link-2:hover {
+    color: var(--untitled-ui--gray400);
+  }
+
+  .uui-team03_list {
+    grid-row-gap: 2.5rem;
+    grid-template-columns: 1fr;
+  }
+
+  .uui-team03_image-wrapper {
+    margin-bottom: 1rem;
+  }
+
+  .uui-team03_component {
+    margin-top: 3rem;
+  }
+
+  .uui-team03_cta {
+    grid-column-gap: 3rem;
+    flex-direction: column;
+    grid-template-columns: 1fr;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 3rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .uui-team03_cta-content {
+    margin-right: 0;
+  }
+
+  .uui-team03_cta-button-row {
+    flex-flow: wrap-reverse;
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .uui-layout73_component {
+    grid-row-gap: 3rem;
+    grid-template-columns: 1fr;
+  }
+
+  .uui-button-link {
+    font-size: 1rem;
+  }
+
+  .uui-button-link:hover {
+    color: var(--untitled-ui--primary700);
+  }
+
+  .uui-layout73_image-wrapper {
+    margin-bottom: 1.5rem;
   }
 }
 
@@ -2151,16 +2814,20 @@
     grid-template-rows: auto auto auto;
   }
 
+  .uui-layout49_image-wrapper {
+    min-height: 12rem;
+  }
+
   .uui-team02_image-wrapper {
     padding-top: 66%;
   }
 
-  .uui-team02_list {
+  .uui-team02_list, .uui-contact13_component {
     grid-template-columns: 1fr;
   }
 }
 
-#w-node-cc5b0553-5c44-efe0-5626-8ea4b524b67a-1df4f4c4, #w-node-cc5b0553-5c44-efe0-5626-8ea4b524b67c-1df4f4c4, #w-node-cc5b0553-5c44-efe0-5626-8ea4b524b67e-1df4f4c4, #w-node-cc5b0553-5c44-efe0-5626-8ea4b524b680-1df4f4c4, #w-node-cc5b0553-5c44-efe0-5626-8ea4b524b682-1df4f4c4, #w-node-cc5b0553-5c44-efe0-5626-8ea4b524b684-1df4f4c4, #w-node-cc5b0553-5c44-efe0-5626-8ea4b524b686-1df4f4c4, #w-node-cc5b0553-5c44-efe0-5626-8ea4b524b695-1df4f4c4, #w-node-cc5b0553-5c44-efe0-5626-8ea4b524b697-1df4f4c4, #w-node-cc5b0553-5c44-efe0-5626-8ea4b524b699-1df4f4c4, #w-node-cc5b0553-5c44-efe0-5626-8ea4b524b69b-1df4f4c4, #w-node-cc5b0553-5c44-efe0-5626-8ea4b524b69d-1df4f4c4, #w-node-cc5b0553-5c44-efe0-5626-8ea4b524b69f-1df4f4c4, #w-node-cc5b0553-5c44-efe0-5626-8ea4b524b6a1-1df4f4c4 {
+#w-node-cc5b0553-5c44-efe0-5626-8ea4b524b67a-1df4f4c4, #w-node-cc5b0553-5c44-efe0-5626-8ea4b524b67c-1df4f4c4, #w-node-cc5b0553-5c44-efe0-5626-8ea4b524b67e-1df4f4c4, #w-node-cc5b0553-5c44-efe0-5626-8ea4b524b680-1df4f4c4, #w-node-cc5b0553-5c44-efe0-5626-8ea4b524b682-1df4f4c4, #w-node-cc5b0553-5c44-efe0-5626-8ea4b524b684-1df4f4c4, #w-node-cc5b0553-5c44-efe0-5626-8ea4b524b686-1df4f4c4 {
   justify-self: center;
 }
 
