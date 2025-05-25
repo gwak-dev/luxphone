@@ -1,0 +1,64 @@
+{
+    "images": [
+        {
+            "url": "https://raw.githubusercontent.com/gwak-dev/luxphone/main/public/gallery/01.webp",
+            "alt": "LUX PHONE Gallery Image 1",
+            "title": "제품 이미지 1"
+        },
+        {
+            "url": "https://raw.githubusercontent.com/gwak-dev/luxphone/main/public/gallery/02.webp",
+            "alt": "LUX PHONE Gallery Image 2",
+            "title": "제품 이미지 2"
+        },
+        {
+            "url": "https://raw.githubusercontent.com/gwak-dev/luxphone/main/public/gallery/03.webp",
+            "alt": "LUX PHONE Gallery Image 3",
+            "title": "제품 이미지 3"
+        },
+        {
+            "url": "https://raw.githubusercontent.com/gwak-dev/luxphone/main/public/gallery/04.webp",
+            "alt": "LUX PHONE Gallery Image 4",
+            "title": "제품 이미지 4"
+        },
+        {
+            "url": "https://raw.githubusercontent.com/gwak-dev/luxphone/main/public/gallery/05.webp",
+            "alt": "LUX PHONE Gallery Image 5",
+            "title": "제품 이미지 5"
+        },
+        {
+            "url": "https://raw.githubusercontent.com/gwak-dev/luxphone/main/public/gallery/06.webp",
+            "alt": "LUX PHONE Gallery Image 6",
+            "title": "제품 이미지 6"
+        },
+        {
+            "url": "https://raw.githubusercontent.com/gwak-dev/luxphone/main/public/gallery/07.webp",
+            "alt": "LUX PHONE Gallery Image 7",
+            "title": "제품 이미지 7"
+        },
+        {
+            "url": "https://raw.githubusercontent.com/gwak-dev/luxphone/main/public/gallery/08.webp",
+            "alt": "LUX PHONE Gallery Image 8",
+            "title": "제품 이미지 8"
+        },
+        {
+            "url": "https://raw.githubusercontent.com/gwak-dev/luxphone/main/public/gallery/09.webp",
+            "alt": "LUX PHONE Gallery Image 9",
+            "title": "제품 이미지 9"
+        },
+        {
+            "url": "https://raw.githubusercontent.com/gwak-dev/luxphone/main/public/gallery/10.webp",
+            "alt": "LUX PHONE Gallery Image 10",
+            "title": "제품 이미지 10"
+        },
+        {
+            "url": "https://raw.githubusercontent.com/gwak-dev/luxphone/main/public/gallery/11.webp",
+            "alt": "LUX PHONE Gallery Image 11",
+            "title": "제품 이미지 11"
+        },
+        {
+            "url": "https://raw.githubusercontent.com/gwak-dev/luxphone/main/public/gallery/12.webp",
+            "alt": "LUX PHONE Gallery Image 12",
+            "title": "제품 이미지 12"
+        }
+    ]
+} 
