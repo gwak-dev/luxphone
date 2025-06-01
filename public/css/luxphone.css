@@ -1553,9 +1553,19 @@
   display: grid;
 }
 
+.uui-layout76_list._2nd {
+  grid-template-columns: 1fr 1fr;
+  margin-top: 2rem;
+}
+
 .uui-layout76_image {
   border-radius: 16px;
   width: 100%;
+}
+
+.uui-layout76_image._4-5 {
+  width: 40rem;
+  height: 50rem;
 }
 
 .uui-layout76_item {
@@ -2154,6 +2164,11 @@
 
   .uui-team02_list {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .uui-layout76_image._4-5 {
+    width: 20rem;
+    height: 25rem;
   }
 
   .uui-padding-vertical-xhuge-3 {
@@ -2822,7 +2837,17 @@
     padding-top: 66%;
   }
 
-  .uui-team02_list, .uui-contact13_component {
+  .uui-team02_list {
+    grid-template-columns: 1fr;
+  }
+
+  .uui-layout76_list._2nd {
+    grid-column-gap: 0rem;
+    grid-row-gap: 0rem;
+    grid-template-columns: 1fr;
+  }
+
+  .uui-contact13_component {
     grid-template-columns: 1fr;
   }
 }
